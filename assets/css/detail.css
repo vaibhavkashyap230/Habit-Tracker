@@ -1,0 +1,54 @@
+body
+{
+    background-image: url('../BeFunky-collage.jpg');
+    background-size: contain;
+    color: darkorange;
+    font-size: 2rem;
+}
+
+ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li
+{
+    list-style-type: none;
+}
+
+a
+{
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: black;
+    position: relative;
+    bottom: 20px;
+    right: 40px;
+}
+
+#back
+{
+    position: relative;
+    margin-left: 85vw;
+}
+
+h1
+{
+    text-align: center;
+}
+
+#outer
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#date
+{
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+    color: white;
+}

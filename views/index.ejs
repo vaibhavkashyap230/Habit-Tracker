@@ -1,0 +1,36 @@
+ <!-- view for main page -->
+<html>
+    <head>
+        <title>
+            Habit-Tracker
+        </title>
+        <link rel="icon" type="image/png" href="./icon.png">
+        <link rel="stylesheet" type="text/css" href="./css/index.css">
+    </head>
+    <body>
+        <h1>
+            Track your Habbits
+        </h1>
+        <!-- for adding new habits -->
+        <div>
+            <form action="/add" method="POST">
+                <input type="text" name="habbit" placeholder="Add a new habit">
+                <input type="submit" value="Add Habit">
+            </form>
+        </div>
+        <!-- to display all habits -->
+        <div>
+            <ul>
+                <% for(let i of a) { %>
+                <div>
+                <a href="/detailed/<%= i.habbit %>">
+                    <li>
+                        <p><%= i.habbit %></p>
+                    </li>
+                </a>
+                </div>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>

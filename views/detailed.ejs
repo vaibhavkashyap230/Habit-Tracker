@@ -1,0 +1,59 @@
+ <!-- view for detailed information about habit -->
+<html>
+    <head>
+        <title>
+            <%= name %>
+        </title>
+        <link rel="shortcut icon" type="image/png" href="../icon.png">
+        <link rel="stylesheet" type="text/css" href="../css/detail.css">
+    </head>
+    <body>
+        <h1>
+            <%= name %>
+        </h1>
+        <!-- for going back to index -->
+        <a href="http://localhost:8000/index" id="back">Back to Home Page!</a>
+        <div>
+            <!-- for printing dates -->
+            <ul>
+                <% for(let i=0;i<7;i++) { %>
+                    <li>
+                        <div id="date">
+                        <% if(i==0) { %>
+                            <%= '9th June' %>
+                        <% } %>
+                        <% if(i==1) { %>
+                            <%= '10th June' %>
+                        <% } %>
+                        <% if(i==2) { %>
+                            <%= '11th June' %>
+                        <% } %>
+                        <% if(i==3) { %>
+                            <%= '12th June' %>
+                        <% } %>
+                        <% if(i==4) { %>
+                            <%= '13th June' %>
+                        <% } %>
+                        <% if(i==5) { %>
+                            <%= '14th June' %>
+                        <% } %>
+                        <% if(i==6) { %>
+                            <%= 'Today' %>
+                        <% } %>
+                        </div>
+                        <!-- for inserting images -->
+                        <% if(a[i]==2) { %>
+                            <a href="change/<%= name %>/<%= i %>/<%= a[i] %>"><img src="../undone.png"></a>
+                        <% } %>
+                        <% if(a[i]==0) { %>
+                            <a href="change/<%= name %>/<%= i %>/<%= a[i] %>"><img src="../unknown.png"></a>
+                        <% } %>
+                        <% if(a[i]==1) { %>
+                            <a href="change/<%= name %>/<%= i %>/<%= a[i] %>"><img src="../done.png"></a>
+                        <% } %>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </body>
+</html>
